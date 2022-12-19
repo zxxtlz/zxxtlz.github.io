@@ -1,0 +1,116 @@
+* {
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: row wrap;
+    height: auto;
+}
+
+.box1 {
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+    text-align: center;
+    width: 15%;
+    height: auto;
+}
+
+.box2 {
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+    text-align: center;
+    width: 15%;
+    height: auto;
+}
+
+.box3 {
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px;
+    border-style: outset;
+    border-color: rgb(40, 122, 255);
+    text-align: center;
+    width: 15%;
+    height: auto;
+}
+
+.box1 h4 {
+    background-color: rgb(184, 184, 184);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 h4 {
+    background-color: rgb(184, 184, 184);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box3 h4 {
+    background-color: rgb(40, 122, 255);
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4 {
+    height: 33px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.box3 button {
+    margin-bottom: 30px;
+    background-color: rgb(40, 122, 255);
+    color: white;
+    width: 70%;
+    height: 15%;
+    border-radius: 5px;
+    border: 2px;
+}
+
+.box2 button {
+    margin-bottom: 30px;
+    background-color: rgb(40, 122, 255);
+    color: white;
+    width: 70%;
+    height: 15%;
+    border-radius: 5px;
+    border: 2px;
+}
+
+.box1 button {
+    margin-bottom: 30px;
+    background-color: white;
+    color: rgb(40, 122, 255);
+    width: 70%;
+    height: 15%;
+    border-radius: 5px;
+    border: 2px 2px 2px;
+    border-color: rgb(40, 122, 255);
+}
+
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

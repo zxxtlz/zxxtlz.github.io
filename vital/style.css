@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lekton', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-wrap: row wrap;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    text-shadow: 5px 5px 5px;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.buttonn {
+    background-color: rgb(0, 255, 255,0);
+    color: white;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    border: 2px;
+}
+
+.buttonn:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.one {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)),  url(images/mike.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.two {
+    background-image: url(images/arnold.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.two h1 {
+    width: 50%;
+    text-shadow: 2px 2px 2px black;
+}
+
+.three {
+    background-color: black;
+}

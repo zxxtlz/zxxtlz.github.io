@@ -1,0 +1,51 @@
+body
+{
+    font-family:'Times New Roman';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: fixed;
+    margin: 0;
+    padding: 0;
+    animation: bgcolor infinite 10s;
+}
+.container{
+    width: 180px;
+    height: 220px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+@keyframes bgcolor {
+    0%
+    {
+        background-color: red;
+    }
+    25%
+    {
+        background-color: pink;
+    }
+    50%
+    {
+        background-color: green;
+    }
+    75%
+    {
+        background-color: purple;
+    }
+    100%
+    {
+        background-color: blue;
+    }
+}
+
+marquee {
+    height: 100vh;
+}
