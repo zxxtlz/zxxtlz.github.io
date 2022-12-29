@@ -70,6 +70,7 @@ section {
 }
 
 .container {
+    text-align: center;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
@@ -84,16 +85,50 @@ section {
 }
 
 .two {
-    background-image: url(images/arnold.jpg);
-    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)), url(images/nasser.jpg);
+    background-size: auto;
+    background-color: black;
+    background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 0 0 3px #ffffff;
+}
+
+.two ul {
+    list-style-image: url(images/check.png);
+    word-spacing: -2px;
+    text-align: center;
 }
 
 .two h1 {
     width: 50%;
-    text-shadow: 2px 2px 2px black;
 }
 
 .three {
+    background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)), url(images/collage.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
     background-color: black;
+    text-shadow: 0 0 3px #ffffff;
+    text-align: center;
+}
+
+.three h1 {
+    height: auto;
+    width: 50%;
+}
+
+.four {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
 }
