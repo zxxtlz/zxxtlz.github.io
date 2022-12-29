@@ -129,6 +129,35 @@ section {
     height: 100vh;
     width: 100%;
     background-color: black;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.info {
+    display: flex;
+    flex-wrap: row wrap;
+    height: auto;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+}
+
+.box1 {
+    border-radius: 5px;
+    border: 2px;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+    text-align: center;
+    width: 50%;
+    height: auto;
+}
+
+.box2 {
+    border-radius: 5px;
+    border: 2px;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+    text-align: center;
+    width: 50%;
+    height: auto;
 }
