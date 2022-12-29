@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 .navbar {
     position: fixed;
     display: flex;
@@ -22,6 +27,7 @@
 nav {
     display: flex;
     text-align: center;
+    list-style-type: none;
 }
 
 .logo {
@@ -82,6 +88,7 @@ section {
     background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)),  url(images/mike.jpg);
     background-size: cover;
     background-position: center;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .two {
@@ -95,7 +102,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-shadow: 0 0 3px #ffffff;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .two ul {
@@ -116,7 +123,7 @@ section {
     height: 100vh;
     width: 100%;
     background-color: black;
-    text-shadow: 0 0 3px #ffffff;
+    text-shadow: 1px 1px 2px #000;
     text-align: center;
 }
 
@@ -160,4 +167,13 @@ section {
     text-align: center;
     width: 50%;
     height: auto;
+}
+
+.five {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
 }
