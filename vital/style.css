@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lekton', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-wrap: row wrap;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.buttonn {
+    background-color: rgb(0, 255, 255,0);
+    color: white;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    border: 2px;
+}
+
+.buttonn:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+}
+
+.container {
+    text-align: center;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.one {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)),  url(images/mike.jpg);
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.two {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)), url(images/nasser.jpg);
+    background-size: auto;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.two ul {
+    list-style-image: url(images/check.png);
+    word-spacing: -2px;
+    text-align: center;
+}
+
+.two h1 {
+    width: 50%;
+}
+
+.three {
+    background-image: linear-gradient(rgb(0, 0, 0,0.6),rgba(0,0,0,0.6)), url(images/collage.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+}
+
+.three h1 {
+    height: auto;
+    width: 50%;
+}
+
+.four {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.four iframe {
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.info {
+    display: flex;
+    flex-wrap: row wrap;
+    height: auto;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+}
+
+.box1 {
+    border-radius: 5px;
+    border: 2px;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+    text-align: center;
+    width: 50%;
+    height: auto;
+}
+
+.box2 {
+    border-radius: 5px;
+    border: 2px;
+    border-color: rgb(184, 184, 184);
+    border-style: outset;
+    text-align: center;
+    width: 50%;
+    height: auto;
+}
+
+.five {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+}
+
+.six {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+
+.fieldset1 {
+    width: auto;
+    height: auto;
+    font-size: 26px;
+    width: 120%;
+}
+
+.fieldset2 {
+    width: 120%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 26px;
+}
+
+button[type] {
+    background-color: #ffffff;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+button[type]:hover{
+    transition: 1s;
+    box-shadow: 0 2px 20px 0 #ffffff;
+}
+
+textarea {
+    background-color: #ffffff;
+    text-shadow: 1px 1px 1px #f1f1f1;
+    width: 80%;
+    height: 100px;
+    resize: none;
+}
+
+textarea:hover {
+    transition: 1s;
+    box-shadow: 0 2px 20px 0 #ffffff;
+}
+
+input {
+    width: 80%;
+    background-color: #ffffff;
+    text-shadow: 1px 1px 1px #f1f1f1;
+}
+
+input:hover {
+    transition: 1s;
+    box-shadow: 0 2px 20px 0 #ffffff;
+}
+
+::placeholder {
+    color: black;
+    letter-spacing: 3px;
+}
+
