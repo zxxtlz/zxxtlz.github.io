@@ -230,27 +230,34 @@ textarea {
     text-shadow: 1px 1px 1px #f1f1f1;
     width: 80%;
     height: 100px;
+    padding-left: 3px;
     resize: none;
+    outline: none;
 }
 
-textarea:hover {
+textarea:hover,:focus {
     transition: 1s;
     box-shadow: 0 2px 20px 0 #ffffff;
 }
 
-input {
+input[type="text"] {
+    padding-left: 3px;
+    outline: none;
     width: 80%;
     background-color: #ffffff;
     text-shadow: 1px 1px 1px #f1f1f1;
 }
 
-input:hover {
-    transition: 1s;
+input[type="text"]:hover,:focus {
+    transition: 1s linear;
     box-shadow: 0 2px 20px 0 #ffffff;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #555;
 }
 
 ::placeholder {
     color: black;
     letter-spacing: 3px;
 }
-
