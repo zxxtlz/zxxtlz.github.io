@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     justify-content: center;
     margin-top: 20%;
@@ -8,6 +8,11 @@ body {
 }
 
 .text1 {
+    margin: 0px;
+    margin-bottom: 0;
+}
+
+.text2 {
     margin-bottom: 10px;
 }
 
@@ -33,4 +38,8 @@ button:hover {
     width: 200px;
     margin-top: 5px;
     margin: 20px auto;
+}
+
+button:hover {
+    cursor: pointer;
 }
