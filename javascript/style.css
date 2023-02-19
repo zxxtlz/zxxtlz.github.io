@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.text1 {
+    margin-bottom: 10px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    margin-top: 5px;
+    border: 0px;
+    color: white;
+    background: black;
+}
+
+button:hover {
+    background: rgb(58, 58, 58);
+    box-shadow: 0px 0px 30px black;
+    transition: 1s linear; 
+}
+
+#changeMe {
+    background: red;
+    height: 200px;
+    width: 200px;
+    margin-top: 5px;
+    margin: 20px auto;
+}
