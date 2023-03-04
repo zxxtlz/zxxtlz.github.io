@@ -8,11 +8,11 @@ button.onclick = function MusicPlay(){
     document.getElementById("audio1").play();
     if (audio1.currentTime < 52){audio1.currentTime = 52; videoPlay.style.visibility="hidden"; canvas.style.visibility="hidden"; container1.style.visibility="hidden";}
     setTimeout(function(){
-        if (audio1.currentTime >= 63.5){videoPlay.currentTime=1.5; videoPlay.style.visibility="visible"; canvas.style.visibility="visible"; container1.style.visibility="hidden";}
+        if (audio1.currentTime >= 63.5){videoPlay.currentTime=1.25; videoPlay.style.visibility="visible"; canvas.style.visibility="visible"; container1.style.visibility="hidden";}
     }, 18500);
     setTimeout(function(){
-    if (audio1.currentTime >= 105){audio1.currentTime = 164, videoPlay.style.visibility="hidden", canvas.style.visibility="hidden", container1.style.visibility="visible"}
-    }, 65000); // 55 seconds, the check has to be made AFTER the certain amount above has gone by
+    if (audio1.currentTime >= 110){audio1.currentTime = 164, videoPlay.style.visibility="hidden", canvas.style.visibility="hidden", container1.style.visibility="visible"}
+    }, 70000); // 69 seconds, the check has to be made AFTER the certain amount above has gone by
 }
 
 
