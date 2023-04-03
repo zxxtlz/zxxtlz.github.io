@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/Supernos_Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Supernos Ultra</title>
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <nav>
+        <ul>
+        <li><a href=""><img src="images/Supernos_Logo.png" alt="Logo" id="logo"></a></li>
+        <li><a href="#two">Информация за продукта</a></li>
+        <li><a href="#three">Продукта</a></li>
+        <li><a href="#four">Как се използва</a></li>
+        <li><a href="#five">Свържете се с нас</a></li>
+        </ul>
+        </nav>
+    </div>
+    </header>
+
+    <main>
+    <div class="pages">
+        <div class="bgshadow">
+        <section id="one">
+            <figure class="resright">
+                <h1 style="color: #393D3F; font-size:50px;" id="IntroText">Супернос Ултра</h1>
+            </figure>
+            
+        </section>
+        <section id="two">
+            <div class="appear1 reveal">
+                <img src="images/green.jpg" class="green" alt="">
+                <p id="InfoText">Вирусостопер без химия! <br> При проблеми с дишането, сезонни алергии, при работа в нечиста атмосфера, защита от цветен прашец и много други. <br> Иновативните назални филтри Супернос в отличие на съществуващите аналози не са скъпи поради оптимизация на цената и качеството <br> Тройна защита от Цветен прашец, пепел, прах, вируси.</p>
+            </div>
+            
+        </section>
+        <section id="three">
+            <div class="slideshow-container reveal" id="">
+
+                <div class="mySlides">
+                  <div class="numbertext">1 / 5</div>
+                  <img src="images/yellow.jpg" style="width: 70%; height: 75%">
+                  <div class="text">В тях се диша по-лесно заради трите слоя пористи материали</div>
+                </div>
+                
+                <div class="mySlides">
+                  <div class="numbertext">2 / 5</div>
+                  <img src="images/white.jpg" style="width:70%; height: 75%">
+                  <div class="text">В състава на филтрите няма гума или полиетиленови материали</div>
+                </div>
+                
+                <div class="mySlides">
+                  <div class="numbertext">3 / 5</div>
+                  <img src="images/green1.jpg" style="width:70%; height: 75%">
+                  <div class="text">Предназначени за използване от : Възрастни и деца,</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="images/showcase1.jpg" style="width:70%; height: 75%">
+                    <div class="text">бременни и кърмещи, страдащи от алергии, хора със слаб имунитет,</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="images/box2.jpg" style="width:70%; height: 75%;">
+                    <div class="text">за защита и профилактика на респираторни инфекции, работещи във вредни и прашни производства.</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <div class="threebuy reveal">
+                    <h1 class="ProductTitle">Филтри за нос Супернос. Край на сезонните алергии, сенна хрема и др.</h1>
+                    <p id="Price">Цена: 19.50лв</p>
+                    <br>
+                    <p>Описание: Супернос се предлага в 2 размера М и Л ( М за дами и деца ,Л за мъже ) като комплектите съдържат в себе си по 3 филтъра.</p>
+                    <br>
+                    <label for="Size">Брой: </label>
+                    <select name="Am" id="amount">
+                    <option value="1">1 бр.</option>
+                    <option value="3">3 бр.</option>
+                    <option value="5">5 бр.</option>
+                    </select>
+                    <br>
+                    <label for="Size">Размер:</label>
+                    <select name="Size" id="Size">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    </select>
+                    <br>
+                    <button type="submit" id="BuyButton">Купи</button>
+                </div>
+
+        </section>
+        <section id="four" class="reveal">
+            <img src="images/tutorial.jpg" alt="tutorial">
+            <p id="TutorialText">Как се използва</p>
+            <img src="images/tutorial1.jpg" alt="tutorial1">
+        </section>
+        </div>
+        <section id="five">
+            <div class="infofive1">
+            <p>Тел: placeholder</p>
+            <br>
+            <p>Е-Поща: placeholder</p>
+            <br>
+            </div>
+            <div class="infofive">
+                <p>При поръчка уточнете адреса за получаване ( офис на куриер или друг ) телефон и име на получателя, брой продукти които бихте желали да придобиете.</p>
+            </div>
+        </section>
+    </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html>
