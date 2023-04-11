@@ -33,10 +33,10 @@ button.onclick = function MusicPlay(){
         if ( audio1.currentTime < 170) {audio1.currentTime = 171; canvas.style.visibility="hidden"; box1.style.visibility="hidden";}
         setTimeout(function(){
             if ( audio1.currentTime > 170 ) {videoPlay.style.visibility="visible"; videoPlay.play(); videoPlay.currentTime = 0;}
-        }, 14000);
+        }, 14500);
         setTimeout(function(){
             if (audio1.currentTime >= 190 ) {videoPlay.style.visibility="hidden"; audio1.pause(); box1.style.visibility="visible"; windows95.style.visibility="hidden"; background.style.background="black";}
-        }, 45000);
+        }, 45500);
         
     }
 }
