@@ -16,6 +16,7 @@ button.onclick = function MusicPlay(){
 
     if ( randomnum == 1 ) {
         videoPlay.style.width="80%"
+        videoPlay.style.height="300px"
         videoPlay.setAttribute('src', 'video/Kalamede.mp4'); audio1.setAttribute('src', 'music/antifact.mp3')
         document.getElementById("audio1").play();
         if (audio1.currentTime < 52){audio1.currentTime = 52; videoPlay.style.visibility="hidden"; canvas.style.visibility="hidden"; box1.style.visibility="hidden";}
@@ -24,11 +25,12 @@ button.onclick = function MusicPlay(){
         }, 18500);
         setTimeout(function(){
         if (audio1.currentTime >= 111){audio1.currentTime = 164, videoPlay.pause(), videoPlay.style.visibility="hidden", canvas.style.visibility="hidden", box1.style.visibility="visible"}
-        }, 71000); // 69 seconds, the check has to be made AFTER the certain amount above has gone by
+        }, 70000); // 69 seconds, the check has to be made AFTER the certain amount above has gone by
     }
     if ( randomnum == 2 ) {
         //windows 95//
         videoPlay.style.width="400px"
+        videoPlay.style.height="auto"
         windows95.style.visibility="visible"; background.style.visibility="visible"; background.style.background="#008080" ;videoPlay.setAttribute('src', 'video/HXSI.mp4'); audio1.setAttribute('src', 'music/shockyoursenses.mp3');
         document.getElementById("audio1").play();
         if ( audio1.currentTime < 170) {audio1.currentTime = 171; box1.style.visibility="hidden";}
@@ -43,7 +45,7 @@ button.onclick = function MusicPlay(){
         videoPlay.style.width="50%"
         videoPlay.style.height="50%"
         videoPlay.setAttribute('src', 'video/DashShuffle.mp4'); audio1.setAttribute('src', 'music/5Centimeter.mp3')
-        document.getElementById("audio1").play(); background.style.visibility="visible"; background.style.background="none"; backgroundvideo.style.visibility="visible"; backgroundvideo.play(); 
+        document.getElementById("audio1").play(); background.style.visibility="visible"; background.style.background="none"; backgroundvideo.currentTime = 0; backgroundvideo.style.visibility="visible"; backgroundvideo.play(); 
         if ( audio1.currentTime < 1 ) { audio1.currentTime = 210; videoPlay.style.filter="opacity(80%)"; canvas.style.visibility="hidden"; box1.style.visibility="hidden"; }
         setTimeout(function(){
             if ( audio1.currentTime > 210 ) { videoPlay.style.visibility="visible"; videoPlay.play(); videoPlay.currentTime = 0; }
