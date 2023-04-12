@@ -34,7 +34,7 @@ button.onclick = function MusicPlay(){
         if ( audio1.currentTime < 170) {audio1.currentTime = 171; box1.style.visibility="hidden";}
         setTimeout(function(){
             if ( audio1.currentTime > 170 ) {videoPlay.style.visibility="visible"; videoPlay.play(); videoPlay.currentTime = 0;}
-        }, 13500);
+        }, 13700);
         setTimeout(function(){
             if (audio1.currentTime >= 190 ) {videoPlay.style.visibility="hidden"; audio1.pause(); box1.style.visibility="visible"; windows95.style.visibility="hidden"; background.style.background="black";}
         }, 44500);
