@@ -4,6 +4,16 @@
 	z-index: 1;
 }
 
+#background-video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	z-index: 1;
+	visibility: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -207,3 +217,25 @@ canvas {
 	overflow: auto;
 	padding: 5px;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #4d4d4d #242424;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #242424;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #4d4d4d;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }

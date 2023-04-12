@@ -7,6 +7,7 @@ let randonum;
 let source = document.createElement('source');
 let windows95 = document.getElementById('container2');
 let background = document.getElementById('background-canvas');
+let backgroundvideo = document.getElementById('background-video');
 
 button.onclick = function MusicPlay(){
 
@@ -28,16 +29,28 @@ button.onclick = function MusicPlay(){
     if ( randomnum == 2 ) {
         //windows 95//
         videoPlay.style.width="400px"
-        windows95.style.visibility="visible"; background.style.background="#008080" ;videoPlay.setAttribute('src', 'video/HXSI.mp4'); audio1.setAttribute('src', 'music/shockyoursenses.mp3');
+        windows95.style.visibility="visible"; background.style.visibility="visible"; background.style.background="#008080" ;videoPlay.setAttribute('src', 'video/HXSI.mp4'); audio1.setAttribute('src', 'music/shockyoursenses.mp3');
         document.getElementById("audio1").play();
-        if ( audio1.currentTime < 170) {audio1.currentTime = 171; canvas.style.visibility="hidden"; box1.style.visibility="hidden";}
+        if ( audio1.currentTime < 170) {audio1.currentTime = 171; box1.style.visibility="hidden";}
         setTimeout(function(){
             if ( audio1.currentTime > 170 ) {videoPlay.style.visibility="visible"; videoPlay.play(); videoPlay.currentTime = 0;}
         }, 13500);
         setTimeout(function(){
             if (audio1.currentTime >= 190 ) {videoPlay.style.visibility="hidden"; audio1.pause(); box1.style.visibility="visible"; windows95.style.visibility="hidden"; background.style.background="black";}
         }, 44500);
-        
+    }
+    if ( randomnum == 3 ) {
+        videoPlay.style.width="50%"
+        videoPlay.style.height="50%"
+        videoPlay.setAttribute('src', 'video/DashShuffle.mp4'); audio1.setAttribute('src', 'music/5Centimeter.mp3')
+        document.getElementById("audio1").play(); background.style.visibility="visible"; background.style.background="none"; backgroundvideo.style.visibility="visible"; backgroundvideo.play(); 
+        if ( audio1.currentTime < 1 ) { audio1.currentTime = 210; videoPlay.style.filter="opacity(80%)"; canvas.style.visibility="hidden"; box1.style.visibility="hidden"; }
+        setTimeout(function(){
+            if ( audio1.currentTime > 210 ) { videoPlay.style.visibility="visible"; videoPlay.play(); videoPlay.currentTime = 0; }
+        }, 3800)
+        setTimeout(function() {
+            if ( audio1.currentTime > 230 ) { videoPlay.style.visibility="hidden"; videoPlay.pause(); audio1.pause(); box1.style.visibility="visible"; backgroundvideo.style.visibility="hidden"; background.style.visibility="hidden"; videoPlay.style.filter="opacity(100%)";}
+        }, 35000)
     }
 }
 
