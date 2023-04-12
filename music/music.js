@@ -47,7 +47,7 @@ button.onclick = function MusicPlay(){
         if ( audio1.currentTime < 1 ) { audio1.currentTime = 210; videoPlay.style.filter="opacity(80%)"; canvas.style.visibility="hidden"; box1.style.visibility="hidden"; }
         setTimeout(function(){
             if ( audio1.currentTime > 210 ) { videoPlay.style.visibility="visible"; videoPlay.play(); videoPlay.currentTime = 0; }
-        }, 3700)
+        }, 3600)
         setTimeout(function() {
             if ( audio1.currentTime > 230 ) { videoPlay.style.visibility="hidden"; videoPlay.pause(); audio1.pause(); box1.style.visibility="visible"; backgroundvideo.style.visibility="hidden"; background.style.visibility="hidden"; videoPlay.style.filter="opacity(100%)";}
         }, 35000)
