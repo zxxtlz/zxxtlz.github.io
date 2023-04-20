@@ -274,8 +274,10 @@ section {
 
 
 #six {
-    height: 25vh;
+    height: 75vh;
     background-color: #393D3F;
+    flex-direction: column;
+    text-align: center;
 }
 
 #six p {
@@ -335,7 +337,6 @@ section {
     border: solid;
     padding: 10px;
     font-size: 20px;
-
 }
 
 #BuyButton:hover {
@@ -367,5 +368,51 @@ section {
     border: 3px solid #ffffff;
   }
 
+/* Submit Form */
 
+.fieldset2 {
+    width: 120%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 26px;
+    text-align: center;
+}
 
+textarea {
+    background-color: #ffffff;
+    text-shadow: 1px 1px 1px #f1f1f1;
+    width: 80%;
+    height: 100px;
+    padding-left: 3px;
+    resize: none;
+    outline: none;
+}
+
+input[type="text"] {
+    padding-left: 3px;
+    outline: none;
+    width: 80%;
+    background-color: #ffffff;
+    text-shadow: 1px 1px 1px #f1f1f1;
+}
+
+::placeholder {
+    color: black;
+    letter-spacing: 3px;
+}
+
+button[type] {
+    background-color: #ffffff;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}

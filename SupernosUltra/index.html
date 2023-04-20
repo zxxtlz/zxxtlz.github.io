@@ -98,7 +98,7 @@
                     <option value="L">L</option>
                     </select>
                     <br>
-                    <button type="submit" id="BuyButton">Купи</button>
+                    <a href="#six"><button type="submit" id="BuyButton">Купи</button></a>
                 </div>
 
         </section>
@@ -190,15 +190,36 @@
         </section>
         </div>
         <section id="six">
-            <div class="infofive1">
-            <p>Тел: placeholder</p>
-            <br>
-            <p>Е-Поща: placeholder</p>
-            <br>
-            </div>
             <div class="infofive">
                 <p>При поръчка уточнете адреса за получаване ( офис на куриер или друг ) телефон и име на получателя, брой продукти които бихте желали да придобиете.</p>
             </div>
+            <article>
+                <div class="fieldset2">
+      
+                  <form>
+                      <fieldset>
+                          <legend>Свържете се с нас!</legend>
+                          <input type="text" placeholder="Име" id="Name" name="fieldset">
+                          <br>
+                          <input type="text" placeholder="Фамилия" id="Family" name="fieldset">
+                          <br>
+                          <input type="text" placeholder="Email" id="Email" name="fieldset">
+                          <br><br>
+                          <textarea type="text" placeholder="Съобщение" id="Message"></textarea>
+                          <br><br>
+                          <button type="button" onclick="fun()">Изпрати</button>
+                      </fieldset>
+                  </div>
+                  </form>
+                  <script>
+                    function fun(){
+                        document.getElementById('Name').value='';
+                        document.getElementById('Family').value='';
+                        document.getElementById('Email').value='';
+                        document.getElementById('Message').value='';
+                        }
+                </script>
+              </article>
         </section>
     </div>
     </main>
