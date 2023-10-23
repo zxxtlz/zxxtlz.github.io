@@ -14,3 +14,5 @@ killall "service" // actually turns off an application, (electron)
 ffmpeg -f x11grab -i :0.0 // screencast  whole screen
 chmod +x "script" // is used to make a script executable (RUNABLE)
 systemctl start "service" // NetworkManager, is used to start services
+nmcli d wifi list // Shows wifi networks
+nmcli d wifi connect "SSID/name of wifi" password "Password" // connects to wifi
