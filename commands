@@ -1,0 +1,16 @@
+acpi -V // shows you the battery life
+cmatrix // matrix hacker
+btop // task manager
+setsid xcompmgr // makes terminals transparent
+python -m http.server // hosts your file (makes website) close with ctrl+c
+ip addr // shows you, your ip (use it for the website)
+wal -i (wallpaper)  // changes color scheme to wallpapers colors 
+curl wttr.in // shows you the weather (ne sum ot pleven maika mu da eba)
+./newlook ( random wallpaper s pywal )
+gpg --recv-key "key"  // when installing from the AUR and it gives you a key error
+mv "file" "new file name" // renames a file
+mv "file/s" "folder" // moves file/s to a new folder
+killall "service" // actually turns off an application, (electron)
+ffmpeg -f x11grab -i :0.0 // screencast  whole screen
+chmod +x "script" // is used to make a script executable (RUNABLE)
+systemctl start "service" // NetworkManager, is used to start services
