@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#navbar {
+    background-color: #000000;
+    padding: 32px;
+    margin: 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    justify-content: space-between;
+}
+
+
+#home {
+    font-size: 2vw;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    float: left;
+}
+
+i {
+    color: chocolate;
+}
+
+li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 50px;
+}
+
+ul li {
+    font-size: 2vw;
+    list-style-type: none;
+}
+
+ul a:hover {
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#one {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 32px;
+}
+
+#two {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#three {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#four {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#five {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#six {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#seven {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#one p, #two p, #three p, #four p, #five p, #six p, #seven p {
+    width: 50%;
+}
+
+#one h2, #two h2, #three h2, #four h2, #five h2, #six h2, #seven h2 {
+    color: chocolate;
+}
+
+#seven a {
+    color:rgb(73, 119, 204);
+}
+
+@media (max-width: 800px){
+    li {
+        padding-right: 50px;
+        padding-left: 5px;
+    }
+    #home {
+        font-size: 20px;
+    }   
+    ul li {
+        font-size: 20px;
+    }
+}
