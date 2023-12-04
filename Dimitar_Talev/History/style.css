@@ -377,3 +377,32 @@ figure {
     }
 }
 
+@media (max-height: 1000px) {
+    #two {
+        height: 90vh
+    }
+    #three {
+        height: 90vh
+    }
+    #four {
+        height: 90vh
+    }
+    #five {
+        height: 90vh
+    }
+    #six {
+        height: 90vh
+    }
+    #seven {
+        height: 90vh
+    }
+    #eight {
+        height: 90vh
+    }
+    #nine {
+        height: 90vh
+    }
+    #ten {
+        height: 90vh
+    }
+}
