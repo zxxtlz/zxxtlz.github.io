@@ -377,7 +377,7 @@ figure {
     }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 600px) {
     #two {
         height: 100vh;
     }
