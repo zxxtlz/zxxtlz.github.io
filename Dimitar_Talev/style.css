@@ -1,0 +1,211 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header ul {
+    background-color: #000000;
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    position: fixed;
+}
+
+
+ul a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#images {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#sectone {
+    font-size: 32px;
+    color: white;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#one, #two , #three, #four {
+    margin: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 999;
+}
+
+#one img, #two img , #three img, #four img {
+    height: 200px;
+    width: 200px;
+    border: 2px solid white;
+}
+
+#one:hover, #two:hover , #three:hover, #four:hover {
+    #onepopup, #twopopup, #threepopup, #fourpopup {
+        transition: 1s;
+        top: 0;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #303030, 0 0 40px #303030, 0 0 50px #303030, 0 0 40px #303030, 0 0 40px #303030;
+    } 
+    to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0a0a0a, 0 0 40px #0a0a0a, 0 0 50px #0a0a0a, 0 0 40px #0a0a0a, 0 0 40px #0a0a0a, 0 0 40px #0a0a0a;
+    }
+}
+
+
+#onepopup, #twopopup, #threepopup, #fourpopup {
+    text-align: center;
+    position: relative;
+    top: 70px;
+    z-index: -1;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+} 
+
+#onepopup:hover, #twopopup:hover, #threepopup:hover, #fourpopup:hover {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+}
+
+button {
+    background:    #000000;
+    background:    linear-gradient();
+    border:        1px solid #ffffff;
+    border-radius: 20px;
+    padding:       10px 40px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 26px/1 "Times new roman", sans-serif;
+    text-align:    center;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px#ffffff;
+    transition: 0.3s;
+}
+
+#tekst {
+    text-align: center;
+    margin: 2%;
+}
+
+@media  (max-width: 410px) {
+    section {
+        height: 100vh;
+    }
+}
+
+#zaglavie {
+    color: chocolate;
+    font-size: 3vw;
+}
+
+@media  (max-width: 800px) {
+    section {
+        height: 100vh;
+    }
+    #sectone
+    {
+        height: 100vh;
+    }
+    #zaglavie {
+        font-size: 8vw;
+    }
+}
+
+@media (max-height: 500px) {
+    section {
+        height: 200vh;
+    }
+    #sectone
+    {
+        height: 100vh;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bck-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform: translateZ(600px);
+              transform: translateZ(600px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform: translateZ(600px);
+              transform: translateZ(600px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+
+#one, #two , #three, #four {
+	-webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
