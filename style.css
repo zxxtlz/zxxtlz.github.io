@@ -63,3 +63,20 @@ button:hover {
     cursor: pointer;
     transition: 0.5s;
 }
+
+#weirdtext {
+    display: flex;
+    justify-content:baseline;
+}
+
+@media  (max-width: 900px) {
+    * {
+     font-size: 10px;   
+    }
+}
+
+@media  (max-width: 350px) {
+    * {
+     font-size: 7px;   
+    }
+}
