@@ -1,0 +1,65 @@
+* {
+    font-family: "Roboto Mono", monospace;
+    color: #60b0ff;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body {
+    background-image: url(images/space.gif);
+    background-repeat: repeat;
+}
+
+a{
+    color: white;
+}
+a:hover {
+    color: #60b0ff;
+    cursor: pointer;
+}
+
+#box {
+    border: solid 1px #5c5c5c;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #020c17;
+    width: 75%;
+    height: auto;
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #272727; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    color: #60b0ff;
+    cursor: pointer;
+    transition: 0.5s;
+}
