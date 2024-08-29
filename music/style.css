@@ -166,14 +166,21 @@ canvas {
 .notepad-icon {
 	height: 100%;
 	float: left;
-	padding-top: 1px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
-.notepad-icon img {
+.notepad-icon svg {
 	object-fit: fill;
 	display: block;
-	height: 19px;
-	width: 19px;
+	width: 25px;
+	height: 70%;
+	background: #BFBFBF;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	overflow: hidden;
 }
 
 .icon-maximize {
