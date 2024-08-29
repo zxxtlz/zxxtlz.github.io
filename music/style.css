@@ -4,6 +4,12 @@
 	z-index: 1;
 }
 
+#preload {
+	visibility: hidden;
+	z-index: -9;
+	position: absolute;
+}
+
 #background-video {
 	position: absolute;
 	top: 50%;
