@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode" />
   <link href="output.css" rel="stylesheet">
+  <link rel="icon" href="https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/logo1.png">
+  <title>Garden Boys</title>
 </head>
 <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
     <style>
@@ -249,7 +251,7 @@
                 </div>
                 <div class="mt-8 ">
                     <form class="flex items-center justify-center ">
-                        <input class="form-input w-48 dark:bg-black" type="text" placeholder="Add promocode">
+                        <input class="form-input w-48 dark:bg-black dark:text-white" type="text" placeholder="Add promocode">
                         <button class="ml-3 flex items-center px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
                             <span>Apply</span>
                         </button>
@@ -810,7 +812,7 @@
                             <rect x="8" y="15" width="2" height="2" />
                         </svg>
                     </div>
-                    <input id="expiry" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border dark:bg-gray-950" placeholder="MM/YY" />
+                    <input id="expiry" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border dark:bg-gray-950" maxlength="5" placeholder="MM/YY" />
                 </div>
                 <label for="cvc" class="text-gray-800 text-sm font-bold leading-tight tracking-normal dark:text-white">CVC</label>
                 <div class="relative mb-5 mt-2">
@@ -822,7 +824,15 @@
                             <polyline points="11 12 12 12 12 16 13 16"></polyline>
                         </svg>
                     </div>
-                    <input id="cvc" maxlength="3" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border dark:bg-gray-950" placeholder="XXX"/>
+                    <script>
+                        function validateInput(event) {
+                            const char = String.fromCharCode(event.keyCode);
+                            if (!/^[0-9]*$/.test(char)) {
+                                event.preventDefault();
+                            }
+                        }
+                    </script>
+                    <input id="cvc" maxlength="3" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border dark:bg-gray-950" onkeypress="validateInput(event)" placeholder="XXX"/>
                 </div>
                 <div class="flex items-center justify-start w-full">
                     <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-blue-500 bg-blue-600 rounded text-white px-8 py-2 text-sm" onclick="alert('Order sent!'), modalHandler(), clearForm()">Submit</button>
