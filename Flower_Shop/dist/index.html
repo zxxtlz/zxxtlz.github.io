@@ -68,12 +68,12 @@
             }
         </script>
     <header class="bg-white dark:bg-gray-950 w-[100%] border-b-4 border-blue-500 " style="position: fixed;">
-        <nav class="flex justify-between items-center w-[92%] h-20  mx-auto" >
+        <nav class="flex justify-between items-center w-[92%] h-20 mx-auto" >
             <div class="font-bold">
-                  <img class="w-24 cursor-pointer" src="/images/logo1.png" alt="Garden Boys"> 
+                  <img class="w-24 cursor-pointer" src="https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/logo1.png" alt="Garden Boys"> 
             </div>
             <div
-                class="nav-links duration-500 md:static fixed md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 sm:transition-none sm:bg-white sm:dark:bg-gray-950">
+                class="nav-links duration-500 md:static fixed md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 sm:transition-none bg-white dark:bg-gray-950">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                     <li>
                         <a class="text-black hover:text-gray-500 transition dark:text-white dark:hover:text-gray-500" href="#home">Home</a>
@@ -113,13 +113,33 @@
             </div>
     </header>
 
+
+<style>
+    @media (max-height: 800px){
+        #home {
+            height: 120vh;
+        }
+    }
+    @media (max-height: 700px){
+        #home {
+            height: 140vh;
+        }
+    }
+    @media (max-height: 600px){
+        #home {
+            height: 160vh;
+        }
+    }
+</style>
+
+
     <div>
-        <section id="home" class="bg-white dark:bg-gray-950 pt-10">
+        <section id="home" class="bg-white dark:bg-gray-950 pt-10 h-screen">
             <div class="container px-6 py-16 mx-auto ">
                 <div class="lg:flex lg:items-center ">
-                    <div class="w-full space-y-12 lg:w-1/2 ">
+                    <div class="w-full space-y-12 lg:w-1/2 pt-[10%]">
                         <div>
-                            <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Learn about <br> our history</h1>
+                            <h1 class="text-5xl font-semibold text-gray-800 uppercase lg:text-7xl dark:text-white">Welcome to<br> Garden Boys</h1>
                         
                             <div class="mt-2">
                                 <span class="inline-block w-40 h-1 rounded-full bg-blue-500"></span>
@@ -129,68 +149,73 @@
                         </div>
 
                         <div class="md:flex md:items-start md:-mx-4">
-                            <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-black dark:bg-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                </svg>
-                            </span>
 
                             <div class="mt-4 md:mx-4 md:mt-0">
-                                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Our beginning</h1>
+                                <h1 class="text-2xl font-semibold text-blue-500 capitalize">Discover the Beauty of Nature</h1>
 
                                 <p class="mt-3 text-gray-500 dark:text-white">
-                                    We are the gardeners of Burgas, we started from the faculty of league of legends and wanted to begin e-sports careers, but that failed so we started gardening
+                                    We, the Garden Boys are passionate about bringing the natural beauty and elegance of flowers into your life. Whether you're celebrating a special occasion, expressing your love and affection, or simply celebrating a special occasion, expressing your love and affection, or simply looking to brighten someone's day, our flowers are the perfect choice. 
                                 </p>
-                            </div>
-                        </div>
-
-                        <div class="md:flex md:items-start md:-mx-4">
-                            <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-black dark:bg-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                <br>
+                                <br>
+                                <a class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-3xl uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500 cursor-pointer" href="#products">
+                                    <span>Shop now</span>
+                                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+                                        <path d="M8.00001 1V12.2929L11.1465 9.14645L11.8536 9.85355L7.50001 14.2071L3.14645 9.85355L3.85356 9.14645L7.00001 12.2929V1H8.00001Z" fill="white"></path>
                                 </svg>
-                            </span>
-
-                            <div class="mt-4 md:mx-4 md:mt-0">
-                                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Our Downfall</h1>
-
-                                <p class="mt-3 text-gray-500 dark:text-white">
-                                    We tried our hand at playing Counter-Strike for the same reason, but we inevitebly failed because one of our players got a girlfriend and he couldn't focus on his career 
-                                </p>
+                                </a>
                             </div>
-                        </div>
-
-                        <div class="md:flex md:items-start md:-mx-4">
-                            <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-black dark:bg-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                                </svg>
-                            </span>
-
-                            <div class="mt-4 md:mx-4 md:mt-0">
-                                <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Our Awakening</h1>
-
-                                <p class="mt-3 text-gray-500 dark:text-white">
-                                    Then we started trading and selling our own homemade-farts in school to our classmates and teachers
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
 
-                    <div class="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
-                        <img class="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[20rem] rounded-full shadow-xl" src="/images/bidens_hyperborea.jpg" alt="Да го духат ДПС и АПС">
+<style>
+    #containerr {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 10px;
+    }
+    #bg1 {
+        background: url('https://hips.hearstapps.com/hmg-prod/images/cornflower-july-flower-1594895124.jpg');
+        background-size: cover;
+        background-position: 350px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        border-radius: 5px;
+    }
+    .item-wide {
+        width: 80%; /* БРАТ ВИЖ КАКВО НАПРАВИХ */
+    }
+    .item-not-wide {
+        width: 120%;
+        margin-left: -75px; /* Negative margin to shift left */
+    }
+    @media (max-width: 1280px) {
+        .item-not-wide {
+        margin-left: -50px; /* Negative margin to shift left */
+    }
+}
+</style>
+
+                    <div class="hidden ml-16 lg:w-1/2 lg:grid">                        
+                        <div class="hidden lg:w-1/2 lg:flex lg:flex-row" id="containerr">
+                            <div class="w-[16rem] h-[16rem] object-cover xl:w-[24rem] xl:h-[16rem] shadow-xl item-wide" id="bg1"></div>
+                            <div class="w-[16rem] h-[16rem] object-cover xl:w-[24rem] xl:h-[16rem] shadow-xl item-not-wide" id="bg1"></div>
+                            <div class="w-[16rem] h-[16rem] object-cover xl:w-[24rem] xl:h-[16rem] shadow-xl" id="bg1"></div>
+                            <div class="w-[16rem] h-[16rem] object-cover xl:w-[24rem] xl:h-[16rem] shadow-xl" id="bg1"></div>
+                        </div>
                     </div>
                 </div>
 
-                <hr class="border-gray-200 my-12 dark:border-gray-700">
             </div>
+            <hr class="border-gray-200 my-12 w-[92%] mx-auto dark:border-gray-700">
         </section>
     </div>
 
     
     <div>
-        <section class="bg-white" style="height: 100vh;" id="products">
+        <section class="bg-white h-screen" id="products">
             <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
         <div x-data="{ cartOpen: false , isOpen: false }" class="bg-white dark:bg-gray-950">
@@ -214,12 +239,12 @@
             </header>
             <div :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'" class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300 dark:bg-gray-950">
                 <div class="flex items-center justify-between">
-                    <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
+                    <h3 class="text-2xl font-medium text-gray-700 dark:text-white">Your cart</h3>
                     <button @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none">
                         <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                 </div>
-                <div class="flex justify-between mt-6 flex-col" id="result">
+                <div class="flex justify-between mt-6 flex-col dark:text-white" id="result">
                     
                 </div>
                 <div class="mt-8 ">
@@ -242,7 +267,7 @@
                         <h3 class="text-gray-600 text-2xl font-medium dark:text-white">Bulgarian Specials</h3>
                         <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
                                 <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                                    <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('/images/lilly.jpg')">
+                                    <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/lilly.jpg')">
                                         <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500" id="cart" onclick="addParagraph('Golden-Rayed Lily 12лв')">
                                             <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                         </button>
@@ -257,7 +282,7 @@
                                 </div>
 
                                 <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                                <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('/images/rose1.jpg')">
+                                <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/rose1.jpg')">
                                     <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500" id="cart" onclick="addParagraph('Bulgarian Rose 15лв')">
                                         <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                     </button>
@@ -273,7 +298,7 @@
 
 
                                 <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                                    <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('/images/koki.jpg')">
+                                    <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/koki.jpg')">
                                         <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500" id="cart" onclick="addParagraph('Snowdrops 10лв')">
                                             <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                         </button>
@@ -288,7 +313,7 @@
                                 </div>
 
                                 <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                                <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('/images/Forsythia2.jpg')">
+                                <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/Forsythia2.jpg')">
                                     <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500" id="cart" onclick="addParagraph('The Gold Forsythia 16лв')">
                                         <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                     </button>
@@ -371,7 +396,7 @@
                 <div class="flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 bg-white dark:bg-black dark:text-white mx-16 my-16 py-6 px-6 shadow-xl">
                     <div class="mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 pr-16 text-gray-700 shadow-none">
                       <img
-                        src="/images/Conev.jpg"
+                        src="https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/Conev.jpg"
                         alt="Tsvetan Tsanev"
                         class="inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
                       />
@@ -590,7 +615,7 @@
                         <div class="lg:flex lg:items-center ">
                             <div class="hidden lg:flex lg:items-center flex-col lg:w-1/2 lg:justify-center">
                                 <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Meet the Team</h1>
-                                <img class="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[20rem] rounded-full shadow-xl" src="/images/team.jpg" alt="Пецата, Тошето и Ицака нищо не напшравиха">
+                                <img class="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[20rem] rounded-full shadow-xl" src="https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/team.jpg" alt="Пецата, Тошето и Ицака нищо не напшравиха">
                             </div>
                             <div class="w-full space-y-12 lg:w-1/2 ">
         
@@ -654,7 +679,7 @@
             <div class="md:flex md:justify-between w-[95%] pl-20">
                 <div class="mb-6 md:mb-0">
                     <a href="#" target="_blank" class="flex items-center">
-                        <img src="/images/logo1.png" class="mr-4 h-32" alt="Garden Boys">
+                        <img src="https://raw.githubusercontent.com/zxxtlz/Flower_Shop/refs/heads/main/images/logo1.png" class="mr-4 h-32" alt="Garden Boys">
                         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Garden Boys</span>
                     </a>
                 </div>
@@ -699,13 +724,35 @@
                     </div>
                 </div>
             </div>
-
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com" target="_blank" class="hover:underline">Garden Boys™</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <a href="https://github.com/zxxtlz/Flower_Shop" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</section>
+</div>
 <!-- Code block starts -->
 <dh-component>
             
     <div class="py-12 bg-gray-700 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0 fixed hidden overflow-y-auto" id="modal">
         <div role="alert" class="relative bottom-[3%] mx-auto w-11/12 md:w-2/3 max-w-lg">
-            <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400 dark:bg-gray-950">
+            <script>
+                function clearForm() {
+                    document.getElementById("myForm").reset();
+                }
+            </script>
+            <form id="myForm" class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400 dark:bg-gray-950">
                 <div class="w-full flex justify-start text-gray-600 mb-3">
                     <svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet" width="52" height="52" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path class="dark:text-white" stroke="none" d="M0 0h24v24H0z" />
@@ -721,7 +768,7 @@
                 <label for="email2" class="text-gray-800 text-sm font-bold leading-tight tracking-normal dark:text-white">Card Number</label>
                 <div class="relative mb-5 mt-2">
                     <div class="absolute text-gray-600 flex items-center px-4 border-r h-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card dark:text-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" />
                             <rect x="3" y="5" width="18" height="14" rx="3" />
                             <line x1="3" y1="10" x2="21" y2="10" />
@@ -729,12 +776,32 @@
                             <line x1="11" y1="15" x2="13" y2="15" />
                         </svg>
                     </div>
-                    <input id="email2" type="tel" maxlength="19" required pattern="[0-9\s]{13,19}" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border dark:bg-gray-950" placeholder="XXXX - XXXX - XXXX - XXXX" />
+                    <input id="email2" type="tel" maxlength="19" required pattern="[0-9\s]{13,19}" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border dark:bg-gray-950" placeholder="XXXX - XXXX - XXXX - XXXX" oninput="formatCardNumber(this)"/>
                 </div>
+<script>
+    function formatCardNumber(input) {
+    // Remove all non-digit characters
+    let value = input.value.replace(/\D/g, '');
+
+    // Split the number into groups of 4 and join with spaces
+    let formattedValue = '';
+    for (let i = 0; i < value.length; i += 4) {
+        if (i > 0) {
+            formattedValue += ' ';
+        }
+        formattedValue += value.slice(i, i + 4);
+    }
+
+    // Set the formatted value back to the input
+    input.value = formattedValue;
+}
+
+</script>
+                
                 <label for="expiry" class="text-gray-800 text-sm font-bold leading-tight tracking-normal dark:text-white">Expiry Date</label>
                 <div class="relative mb-5 mt-2">
                     <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event dark:text-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" />
                             <rect x="4" y="5" width="16" height="16" rx="2" />
                             <line x1="16" y1="3" x2="16" y2="7" />
@@ -748,18 +815,18 @@
                 <label for="cvc" class="text-gray-800 text-sm font-bold leading-tight tracking-normal dark:text-white">CVC</label>
                 <div class="relative mb-5 mt-2">
                     <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle dark:text-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"></path>
                             <circle cx="12" cy="12" r="9"></circle>
                             <line x1="12" y1="8" x2="12.01" y2="8"></line>
                             <polyline points="11 12 12 12 12 16 13 16"></polyline>
                         </svg>
                     </div>
-                    <input id="cvc" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border dark:bg-gray-950" placeholder="XXX" />
+                    <input id="cvc" maxlength="3" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border dark:bg-gray-950" placeholder="XXX"/>
                 </div>
                 <div class="flex items-center justify-start w-full">
-                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-blue-500 bg-blue-600 rounded text-white px-8 py-2 text-sm" onclick="alert('Order sent!'), modalHandler()">Submit</button>
-                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm" onclick="modalHandler()">Cancel</button>
+                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-blue-500 bg-blue-600 rounded text-white px-8 py-2 text-sm" onclick="alert('Order sent!'), modalHandler(), clearForm()">Submit</button>
+                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm" onclick="modalHandler(), clearForm()">Cancel</button>
                 </div>
                 <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="modalHandler()" aria-label="close modal" role="button">
                     <svg  xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -768,7 +835,7 @@
                         <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
                 </button>
-            </div>
+            </form>
         </div>
     </div>
     <script>
@@ -805,40 +872,20 @@
     
 </dh-component>
 <!-- Code block ends -->
-        
-            <script>
-                function addParagraph(text) {
-                    // Create a new paragraph element
-                    var newParagraph = document.createElement("p");
-                    newParagraph.textContent = text;
-        
-                    // Append the new paragraph to the result div
-                    document.getElementById("result").appendChild(newParagraph);
-                }
-                
-
-            </script>
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com" target="_blank" class="hover:underline">Garden Boys™</a>. All Rights Reserved.
-    </span>
-                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                    <a href="https://github.com/zxxtlz/Flower_Shop" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </footer>
-</div>
-        </section>
-    </div>
 <script>
     tailwind.config = {
     darkMode: 'class',
+    }
+</script>
+
+<script>
+    function addParagraph(text) {
+        // Create a new paragraph element
+        var newParagraph = document.createElement("p");
+        newParagraph.textContent = text;
+
+        // Append the new paragraph to the result div
+        document.getElementById("result").appendChild(newParagraph);
     }
 </script>
 
@@ -846,7 +893,7 @@
         const navLinks = document.querySelector('.nav-links')
         function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[11.4%]')
+            navLinks.classList.toggle('top-[9%]')
         }
     </script>
 
