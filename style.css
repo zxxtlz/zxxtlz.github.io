@@ -32,7 +32,7 @@ a:hover {
 
 #projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -62,6 +62,27 @@ button:hover {
     color: #60b0ff;
     cursor: pointer;
     transition: 0.5s;
+}
+
+#ttt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#tt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#tf {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #weirdtext {
