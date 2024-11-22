@@ -4,6 +4,7 @@
     font-family: 'Times New Roman', Times, serif;
     color: white;
     text-rendering: none;
+    scroll-behavior: smooth;
 }
 
 @keyframes glow {

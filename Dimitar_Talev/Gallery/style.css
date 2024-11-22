@@ -98,11 +98,11 @@ figcaption {
     text-align: center;
 }
 
-#five1, #five2, #five3, #five4, #five5, #five6 {
+#five1, #five2, #five3, #five4, #five5, #five6, #five7 {
     display: flex;
     flex-wrap: nowrap;
 }
 
-#five1 img, #five2 img, #five3 img , #five4 img, #five5 img {
+#five1 img, #five2 img, #five3 img , #five4 img, #five5 img, #five6 img, #five7 img {
     margin: 1%;
 }

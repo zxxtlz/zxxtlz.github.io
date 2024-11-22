@@ -84,7 +84,7 @@ section {
 
 #one:hover, #two:hover , #three:hover, #four:hover {
     #onepopup, #twopopup, #threepopup, #fourpopup {
-        transition: 1s;
+        transition: 1s ease-in-out;
         top: 0;
     }
 }
