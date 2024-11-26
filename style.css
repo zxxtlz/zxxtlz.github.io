@@ -64,26 +64,14 @@ button:hover {
     transition: 0.5s;
 }
 
-#ttt {
+#ttt, #tf, #tt  {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-#tt {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#tf {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 #weirdtext {
     display: flex;
