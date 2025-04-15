@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗИ Литература 12 Клас</title>
+    <link href="src/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+  button {
+    background-color: #1a1a1a;
+  }
+</style>
+<body class="overflow-hidden font-sans text-center h-screen flex justify-center items-center bg-[#242424]">
+
+  <div class="w-full max-w-md mx-auto p-5 border rounded-md shadow-lg flex flex-col flex-wrap bg-[#242424]">
+      <div class="text-xs lg:text-2xl sm:text-xl mb-5 flex-wrap" id="number"></div>
+      <div class="text-md lg:text-2xl sm:text-xl mb-5 flex-wrap" id="question"></div>
+      <div class="flex flex-col space-y-2" id="options"></div>
+      <div id="result" class="mt-3"></div>
+  </div>
+
+<script>
+    let currentQuestionIndex = 0;
+    const quiz = [
+        {
+            number: 1,
+            question: "Кого е написал/а произведението „Железният светилник\" - Роман  ",
+            options: ["Димитър Талев", "Алеко Константинов", "Никола Вапцаров", "Иван Вазов"],
+            answer: "Димитър Талев"
+        },
+        {
+            number: 2,
+            question: "Кого е написал/а произведението „Бай Ганьо Журналист\" - Фейлетон  ",
+            options: ["Виктор Пасков", "Йордан Йовков", "Борис Христов", "Алеко Константинов"],
+            answer: "Алеко Константинов"
+        },
+        {
+            number: 3,
+            question: "Кого е написал/а произведението „Балкански синдром\" - Комедия  ",
+            options: ["Алеко Константинов", "Димитър Талев", "Станислав Стратиев", "Иван Вазов"],
+            answer: "Станислав Стратиев"
+        },
+        {
+            number: 4,
+            question: "Кого е написал/а произведението „Паисий\" - Ода  ",
+            options: ["Димитър Талев", "Христо Ботев", "Никола Вапцаров", "Иван Вазов"],
+            answer: "Иван Вазов"
+        },
+        {
+            number: 5,
+            question: "Кого е написал/а произведението „История\" - Стихотворение  ",
+            options: ["Димитър Талев", "Никола Вапцаров", "Станислав Стратиев", "Гео Милев"],
+            answer: "Никола Вапцаров"
+        },
+        {
+            number: 6,
+            question: "Кого е написал/а произведението „Ноев Ковчег\" - Роман  ",
+            options: ["Алеко Константинов", "Димитър Талев", "Йордан Радичков", "Иван Вазов"],
+            answer: "Йордан Радичков"
+        },
+        {
+            number: 7,
+            question: "Кого е написал/а произведението „Борба\" - Стихотворение  ",
+            options: ["Димитър Талев", "Христо Ботев", "Никола Вапцаров", "Гео Милев"],
+            answer: "Христо Ботев"
+        },
+        {
+            number: 8,
+            question: "Кого е написал/а произведението „Андрешко\" - Разказ  ",
+            options: ["Димитър Талев", "Иван Вазов", "Елин Пелин", "Станислав Стратиев"],
+            answer: "Елин Пелин"
+        },
+        {
+            number: 9,
+            question: "Кого е написал/а произведението „Приказка за стълбата\" - Притча  ",
+            options: ["Иван Вазов", "Алеко Константинов", "Димитър Талев", "Христо Смирненски"],
+            answer: "Христо Смирненски"
+        },
+        {
+            number: 10,
+            question: "Кого е написал/а произведението „До моето първо либе\" - Стихотворение  ",
+            options: ["Димитър Талев", "Никола Вапцаров", "Христо Ботев", "Иван Вазов"],
+            answer: "Христо Ботев"
+        },
+        {
+            number: 11,
+            question: "Кого е написал/а произведението „Новото гробище над Сливница\" - Стихотворение  ",
+            options: ["Димитър Талев", "Христо Ботев", "Иван Вазов", "Никола Вапцаров"],
+            answer: "Иван Вазов"
+        },
+        {
+            number: 12,
+            question: "Кого е написал/а произведението „Крадецът на праскови\" - Повест  ",
+            options: ["Иван Вазов", "Димитър Талев", "Алеко Константинов", "Емилиян Станев"],
+            answer: "Емилиян Станев"
+        },
+        {
+            number: 13,
+            question: "Кого е написал/а произведението „При Рилския манастир\" - Стихотворение  ",
+            options: ["Иван Вазов", "Димитър Талев", "Христо Ботев", "Станислав Стратиев"],
+            answer: "Иван Вазов"
+        },
+        {
+            number: 14,
+            question: "Кого е написал/а произведението „Градушка\" - Поема  ",
+            options: ["Алеко Константинов", "Димитър Талев", "Пейо Яворов", "Иван Вазов"],
+            answer: "Пейо Яворов"
+        },
+        {
+            number: 15,
+            question: "Кого е написал/а произведението „Спи Езерото\" - Лирическа миниатюра  ",
+            options: ["Иван Вазов", "Алеко Константинов", "Пенчо Славейков", "Димитър Талев"],
+            answer: "Пенчо Славейков"
+        },
+        {
+            number: 16,
+            question: "Кого е написал/а произведението „Аз искам да те помня все така\" - Елегия  ",
+            options: ["Иван Вазов", "Димитър Талев", "Димчо Дебелянов", "Никола Вапцаров"],
+            answer: "Димчо Дебелянов"
+        },
+        {
+            number: 17,
+            question: "Кого е написал/а произведението „Колко си хубава!\" - Стихотворение  ",
+            options: ["Димитър Талев", "Христо Фотев", "Иван Вазов", "Алеко Константинов"],
+            answer: "Христо Фотев"
+        },
+        {
+            number: 18,
+            question: "Кого е написал/а произведението „Посвещение\" - Стихотворение  ",
+            options: ["Димитър Талев", "Иван Вазов", "Алеко Константинов", "Петя Дубарова"],
+            answer: "Петя Дубарова"
+        },
+        {
+            number: 19,
+            question: "Кого е написал/а произведението „Спасова могила\" - Разказ  ",
+            options: ["Димитър Талев", "Алеко Константинов", "Иван Вазов", "Елин Пелин"],
+            answer: "Елин Пелин"
+        },
+        {
+            number: 20,
+            question: "Кого е написал/а произведението „Молитва\" - Стихотворение  ",
+            options: ["Димитър Талев", "Никола Вапцаров", "Атанас Далчев", "Иван Вазов"],
+            answer: "Атанас Далчев"
+        },
+        {
+            number: 21,
+            question: "Кого е написал/а произведението „Вяра\" - Стихотворение  ",
+            options: ["Димитър Талев", "Никола Вапцаров", "Христо Ботев", "Иван Вазов"],
+            answer: "Никола Вапцаров"
+        },
+        {
+            number: 22,
+            question: "Кого е написал/а произведението „Ветрената мелница\" - Разказ  ",
+            options: ["Димитър Талев", "Алеко Константинов", "Иван Вазов", "Елин Пелин"],
+            answer: "Елин Пелин"
+        },
+        {
+            number: 23,
+            question: "Кого е написал/а произведението „Песента на колелетата\" - Разказ  ",
+            options: ["Димитър Талев", "Иван Вазов", "Алеко Константинов", "Йордан Йовков"],
+            answer: "Йордан Йовков"
+        },
+        {
+            number: 24,
+            question: "Кого е написал/а произведението „Балада за Георг Хених\" - Повест  ",
+            options: ["Димитър Талев", "Алеко Константинов", "Виктор Пасков", "Иван Вазов"],
+            answer: "Виктор Пасков"
+        },
+        {
+            number: 25,
+            question: "Кого е написал/а произведението „Две души\" - Стихотворение  ",
+            options: ["Димитър Талев", "Пейо Яворов", "Алеко Константинов", "Иван Вазов"],
+            answer: "Пейо Яворов"
+        },
+        {
+            number: 26,
+            question: "Кого е написал/а произведението „Потомка\" - Стихотворение  ",
+            options: ["Димитър Талев", "Алеко Константинов", "Елисавета Багряна", "Иван Вазов"],
+            answer: "Елисавета Багряна"
+        },
+        {
+            number: 27,
+            question: "Кого е написал/а произведението „Честен кръст\" - Поема  ",
+            options: ["Димитър Талев", "Алеко Константинов", "Борис Христов", "Иван Вазов"],
+            answer: "Борис Христов"
+        }
+    ];
+
+    function loadQuestion() {
+        const currentQuestion = quiz[currentQuestionIndex];
+        document.getElementById('number').innerText = "Въпрос №" + currentQuestion.number + " от " + quiz.length;	
+        document.getElementById('question').innerText = currentQuestion.question;
+        const optionsDiv = document.getElementById('options');
+        optionsDiv.innerHTML = "";
+
+        currentQuestion.options.forEach(option => {
+            const button = document.createElement('button');
+            button.innerText = option;
+            button.onclick = () => checkAnswer(option);
+            optionsDiv.appendChild(button);
+        });
+    }
+
+    function checkAnswer(selectedOption) {
+        const currentQuestion = quiz[currentQuestionIndex];
+        const wrongMessages = [
+            "Това не е вярно.",
+            "Ти си в грешка. Опитай отново!",
+            "Може би не е така. Дай си още един шанс!",
+            "Мисля, че има недоразумение. Пробвай отново.",
+        ];
+
+        if (selectedOption === currentQuestion.answer) {
+            document.getElementById('result').innerText = "Правилно!";
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quiz.length) {
+                setTimeout(() => {
+                    document.getElementById('result').innerText = "";
+                    loadQuestion();
+                }, 1000);
+            } else {
+                document.getElementById('question').innerText = "Поздравления!";
+                document.getElementById('number').innerText = "";
+                document.getElementById('result').innerText = "Минахте викторината!";
+                document.getElementById('options').innerHTML = "";
+            }
+        } else {
+            const randomIndex = Math.floor(Math.random() * wrongMessages.length);
+            document.getElementById('result').innerText = wrongMessages[randomIndex];
+        }
+    }
+
+    loadQuestion();
+</script>
+
+</body>
+</html>
