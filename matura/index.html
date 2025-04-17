@@ -194,6 +194,13 @@
         }
     ];
 
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
     function loadQuestion() {
         const currentQuestion = quiz[currentQuestionIndex];
         document.getElementById('number').innerText = "Въпрос №" + currentQuestion.number + " от " + quiz.length;	
@@ -201,7 +208,10 @@
         const optionsDiv = document.getElementById('options');
         optionsDiv.innerHTML = "";
 
-        currentQuestion.options.forEach(option => {
+        const options = [...currentQuestion.options]; // Copy the options array
+        shuffle(options); // Shuffle the options
+
+        options.forEach(option => {
             const button = document.createElement('button');
             button.innerText = option;
             button.onclick = () => checkAnswer(option);
