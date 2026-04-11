@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgas Travel Guide</title>
+    <meta name="description" content="Your complete travel guide to Burgas, Bulgaria. Discover top attractions, best restaurants, photo galleries, and travel tips for this beautiful coastal city.">
+    <link rel="icon" href="images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#0ea5e9",
+                        accent: "#f59e0b",
+                        dark: "#1e293b",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-light font-sans text-dark">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="#">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="fas fa-umbrella-beach text-white text-xl"></i>
+                        </div>
+                        <h1 class="text-2xl font-bold text-primary font-serif">Burgas<span class="text-accent">Guide</span></h1>
+                    </div>
+                </a>
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
+                        <li><a href="#home" class="flex items-center text-gray-700 hover:text-primary font-medium transition duration-300"><i class="fas fa-home mr-2"></i>Home</a></li>
+                        <li><a href="#attractions" class="flex items-center text-gray-700 hover:text-primary font-medium transition duration-300"><i class="fas fa-landmark mr-2"></i>Top Attractions</a></li>
+                        <li><a href="#food" class="flex items-center text-gray-700 hover:text-primary font-medium transition duration-300"><i class="fas fa-utensils mr-2"></i>Food & Restaurants</a></li>
+                        <li><a href="#gallery" class="flex items-center text-gray-700 hover:text-primary font-medium transition duration-300"><i class="fas fa-images mr-2"></i>Photo Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/burgass.jpg" alt="Burgas coastline with beautiful beach and clear blue water" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-4 py-20 md:py-32 text-white">
+            <div class="max-w-3xl mx-auto text-center animate-fade-in">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mb-6" style="text-shadow:  0px 1px 1px rgb(0 0 0 / 1);">Discover Burgas</h2>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed" style="text-shadow:  0px 1px 1px rgb(0 0 0 / 1);">Bulgaria's vibrant coastal city where the Black Sea meets rich history, delicious cuisine, and unforgettable experiences.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#attractions" class="bg-accent hover:bg-yellow-500 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Explore Attractions</a>
+                    <a href="#gallery" class="bg-[rgb(30_64_175)] border-2 border-white hover:bg-white hover:text-primary text-white font-semibold py-3 px-8 rounded-full transition duration-300">View Gallery</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
+                <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold font-serif text-primary mb-4">Welcome to Burgas</h2>
+                    <div class="section-divider w-24 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600">Burgas is the fourth largest city in Bulgaria and an important cultural, tourist, and economic center on the Black Sea coast.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="animate-slide-up">
+                        <img src="images/Burgas.jpg" alt="Burgas city center with historic buildings and modern architecture" class="rounded-2xl shadow-lg w-full">
+                    </div>
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">Located in the Burgas Bay, the city is known for its beautiful beaches, thermal springs, and the nearby natural reserves. Burgas combines the charm of a seaside resort with the amenities of a modern city.</p>
+                        <p class="text-gray-700 leading-relaxed">The city's history dates back to ancient times, with evidence of Thracian, Greek, and Roman settlements. Today, Burgas is a vibrant destination with a rich cultural calendar, including the famous Burgas Sand Festival and the Spirit of Burgas music festival.</p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-sun text-accent text-xl mr-2"></i>
+                                <span class="font-medium">300+ Sunny Days/Year</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-accent text-xl mr-2"></i>
+                                <span class="font-medium">Fresh Seafood Cuisine</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-landmark text-accent text-xl mr-2"></i>
+                                <span class="font-medium">Rich Cultural Heritage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Attractions Section -->
+    <section id="attractions" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-primary mb-4">Top Attractions</h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover the must-see places that make Burgas a unique destination on the Black Sea coast.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Sozopol  -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/sozopol.jpg"Sozopol old town" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-semibold py-1 px-3 rounded-full">Historical Town</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Sozopol (Apollonia)</h3>
+                            <div class="flex items-center bg-accent text-white text-sm font-bold py-1 px-2 rounded">
+                                <i class="fas fa-star mr-1"></i>4.8
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sozopol charms with its Old Town—cobbled streets, wooden houses, and sea views. Rich in Ancient Greek heritage, it offers scenic cliffs, churches, and museums preserving its deep cultural past.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fas fa-landmark mr-2"></i>
+                            <span class="text-sm">Historical town</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Archaeological Museum -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/nessebar.webp"Burgas Archaeological Museum building and exhibits" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-semibold py-1 px-3 rounded-full">Historical Town</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Nessebar (Mesembria)</h3>
+                            <div class="flex items-center bg-accent text-white text-sm font-bold py-1 px-2 rounded">
+                                <i class="fas fa-star mr-1"></i>4.6
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nessebar enchants with its Old Town on a rocky peninsula—cobbled lanes, medieval churches, and sea views. A UNESCO World Heritage Site, it blends ancient history, rich heritage, and small museums preserving its past.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fas fa-landmark mr-2"></i>
+                            <span class="text-sm">Historical Town</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poda Protected Area -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/Sea_Garden.jpg" alt="Poda Protected Area with wetlands and birds" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-semibold py-1 px-3 rounded-full">Park</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Sea Garden</h3>
+                            <div class="flex items-center bg-accent text-white text-sm font-bold py-1 px-2 rounded">
+                                <i class="fas fa-star mr-1"></i>4.9
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sea Garden is a lush coastal park with sea views, flower alleys, sculptures, and cafes. Perfect for walks, sunsets, and relaxation, it blends nature, culture, and vibrant seaside atmosphere.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fas fa-tree mr-2"></i>
+                            <span class="text-sm">Park</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- St. Anastasia Island -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/anastasia.webp" alt="St. Anastasia Island with monastery and sea view" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-semibold py-1 px-3 rounded-full">Island</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">St. Anastasia Island</h3>
+                            <div class="flex items-center bg-accent text-white text-sm font-bold py-1 px-2 rounded">
+                                <i class="fas fa-star mr-1"></i>4.7
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">A small island with a historic monastery, lighthouse, and prison-turned-museum, accessible by boat from Burgas.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fas fa-water mr-2"></i>
+                            <span class="text-sm">Island</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sand Sculpture Festival -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/sand.jpg" alt="Sand sculptures at Burgas Sand Festival" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-semibold py-1 px-3 rounded-full">Festival</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Burgas Sand Sculpture Festival</h3>
+                            <div class="flex items-center bg-accent text-white text-sm font-bold py-1 px-2 rounded">
+                                <i class="fas fa-star mr-1"></i>4.8
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Annual summer event featuring incredible sand sculptures created by artists from around the world.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fas fa-snowman mr-2"></i>
+                            <span class="text-sm">Festival</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Pier -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="/images/alexandrovska.jpg" alt="Burgas Pier extending into the Black Sea" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-semibold py-1 px-3 rounded-full">Landmark</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Alexandrovska Street</h3>
+                            <div class="flex items-center bg-accent text-white text-sm font-bold py-1 px-2 rounded">
+                                <i class="fas fa-star mr-1"></i>4.5
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Alexandrovska Street in Burgas is the city’s main pedestrian hub, alive day and night with cafes, bars, and shops. All year round it hosts events, street performances, and parties, making it the heart of local nightlife and social life. Always vibrant!</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fas fa-walking mr-2"></i>
+                            <span class="text-sm">Landmark</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Food & Restaurants Section -->
+    <section id="food" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-primary mb-4">Food & Restaurants</h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Savor the flavors of Burgas with fresh seafood, traditional Bulgarian dishes, and international cuisine.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Captain Cook -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/zlatna_ribka.jpg" alt="Zlatna ribka seafood restaurant interior" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 bg-accent text-white text-sm font-semibold py-1 px-3 rounded-full"><i class="fas fa-crown mr-1"></i> Featured</div>
+                        <div class="absolute bottom-4 right-4 bg-dark text-white text-lg font-bold py-1 px-3 rounded">$$</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Zlatna Rbika</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                <span class="font-bold">4.7</span>
+                            </div>
+                        </div>
+                        <div class="mb-3"><span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full">Seafood, Bulgarian</span></div>
+                        <p class="text-gray-600">Zlatna Ribka is a cozy restaurant in central Burgas, blending a seaside atmosphere with Bulgarian and Mediterranean cuisine. It is known for fresh seafood, a stylish interior, and a warm family-friendly setting, ideal for relaxed dining by the sea. today</p>
+                    </div>
+                </div>
+
+
+                <!-- Happy Bar & Grill -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/neptune.jpg" alt="Ethno Restaurant with traditional Bulgarian decor" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 bg-accent text-white text-sm font-semibold py-1 px-3 rounded-full"><i class="fas fa-crown mr-1"></i> Featured</div>
+                        <div class="absolute bottom-4 right-4 bg-dark text-white text-lg font-bold py-1 px-3 rounded">$$$</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Neptune</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                <span class="font-bold">4.8</span>
+                            </div>
+                        </div>
+                        <div class="mb-3"><span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full">Seafood, Bulgarian</span></div>
+                        <p class="text-gray-600">The building of the Neptune restaurant and bar is located directly on the seashore, where it has been welcoming both sunrise and sunset since 1948. Whether you are on a business meeting, a personal celebration, a romantic dinner, or just having lunch with friends, you will be delighted!</p>
+                    </div>
+                </div>
+
+                <!-- Staria Chinar -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/ethnojpg.jpg" alt="Staria Chinar traditional Bulgarian restaurant" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 bg-accent text-white text-sm font-semibold py-1 px-3 rounded-full"><i class="fas fa-crown mr-1"></i> Featured</div>
+                        <div class="absolute bottom-4 right-4 bg-dark text-white text-lg font-bold py-1 px-3 rounded">$$</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Ethno Restaurant</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                <span class="font-bold">4.6</span>
+                            </div>
+                        </div>
+                        <div class="mb-3"><span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full">Traditional Bulgarian</span></div>
+                        <p class="text-gray-600">Ethno Restaurant in Burgas is a stylish seaside dining spot known for its cozy atmosphere and elegant interior inspired by local traditions. It offers a mix of Mediterranean and Bulgarian cuisine, with fresh seafood, grilled meats, and creative dishes, making it popular for both locals and tourists.</p>
+                    </div>
+                </div>
+
+                <!-- La Pastaria -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/food/kartofeni-kufteta-chesnov-sos.webp" alt="La Pastaria Italian restaurant with pasta dishes" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-dark text-white text-lg font-bold py-1 px-3 rounded">$</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Potato patties with garlic sauce</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                <span class="font-bold">4.5</span>
+                            </div>
+                        </div>
+                        <div class="mb-3"><span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full">Traditional Bulgarian</span></div>
+                        <p class="text-gray-600">Crispy golden potato cakes seasoned with herbs and spices, served warm with a creamy, tangy garlic sauce. A simple, comforting and flavorful dish.</p>
+                    </div>
+                </div>
+
+                <!-- Ethno Restaurant -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/food/musaka.jpg" alt="Happy Bar & Grill restaurant with modern interior" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-dark text-white text-lg font-bold py-1 px-3 rounded">$</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Musaka</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                <span class="font-bold">4.3</span>
+                            </div>
+                        </div>
+                        <div class="mb-3"><span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full">Traditional Bulgarian</span></div>
+                        <p class="text-gray-600">Musaka is a traditional Bulgarian baked dish made with layers of potatoes, minced meat, onions, and spices, topped with a creamy mixture of eggs and yogurt. It is hearty, comforting, and often served as a family-style meal across Bulgaria and the Balkans.</p>
+                    </div>
+                </div>
+
+                <!-- Sea Terrace -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover animate-slide-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/food/tarator.png" alt="Sea Terrace restaurant with beachfront view" class="w-full h-full object-cover transition duration-500 hover:scale-110" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-dark text-white text-lg font-bold py-1 px-3 rounded">$</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-dark">Tarator</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                <span class="font-bold">4.9</span>
+                            </div>
+                        </div>
+                        <div class="mb-3"><span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full">Traditional Bulgarian</span></div>
+                        <p class="text-gray-600">Tarator is a traditional Bulgarian cold soup made with yogurt, cucumbers, garlic, dill, water, and walnuts. It is very refreshing, especially in summer, and is commonly served chilled as a starter or light, cooling meal on hot days in Bulgaria.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-primary mb-4">Photo Gallery</h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Explore the beauty of Burgas through these stunning photographs from around the city.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/1.jpg" alt="Burgas beach at sunset with golden sand" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/2.jpg" alt="Historic building in Burgas city center" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/3.jpg" alt="Colorful boats in Burgas fishing port" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/4.jpg" alt="Traditional Bulgarian food spread" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/5.jpg" alt="Burgas Central Beach with umbrellas" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/6.jpg" alt="Burgas Opera House exterior" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/7.jpg" alt="Lake Burgas with birds and nature" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/8.jpg" alt="Night view of Burgas city lights" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/9.jpg" alt="Burgas Central Park fountain" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/10.jpg" alt="Traditional Bulgarian folk dancers" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/11.jpg" alt="Burgas market with fresh produce" class="w-full h-64 object-cover" loading="lazy"></div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md"><img src="images/gallery/12.jpg" alt="Burgas thermal springs spa" class="w-full h-64 object-cover" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-4">
+                            <a href="#">
+                            <i class="fas fa-umbrella-beach text-white text-2xl"></i>
+                        </div>
+                            <h3 class="text-2xl font-bold font-serif">Burgas<span class="text-accent">Guide</span></h3>
+                        </div>
+                    </a>
+                    <p class="text-gray-300 mb-6 max-w-md">Your comprehensive travel companion to Burgas, Bulgaria. Discover the best attractions, restaurants, and experiences in this beautiful coastal city.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Burgas Travel Guide. All rights reserved. | Designed with <i class="fas fa-heart text-red-500 mx-1"></i> for travelers.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
