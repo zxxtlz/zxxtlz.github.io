@@ -1,0 +1,6 @@
+{
+  "name": "Test",
+  "description": "test",
+  "authors": [{ "name": "zxxtlz", "id": "0" }],
+  "main": "index.js"
+}
