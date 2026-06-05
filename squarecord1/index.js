@@ -1,4 +1,4 @@
-// Revenge/Vendetta expose these as globals at runtime
+// No imports — Bunny exposes these as globals at runtime
 const { findByProps } = vendetta.metro;
 const { after } = vendetta.patcher;
 
@@ -11,71 +11,72 @@ function removeRadius(style) {
     if (typeof style !== "object") return;
 
     if ("borderRadius" in style) style.borderRadius = 0;
-
-    for (const corner of [
-        "borderTopLeftRadius",
-        "borderTopRightRadius",
-        "borderBottomLeftRadius",
-        "borderBottomRightRadius",
-    ]) {
-        if (corner in style) style[corner] = 0;
-    }
+    if ("borderTopLeftRadius" in style) style.borderTopLeftRadius = 0;
+    if ("borderTopRightRadius" in style) style.borderTopRightRadius = 0;
+    if ("borderBottomLeftRadius" in style) style.borderBottomLeftRadius = 0;
+    if ("borderBottomRightRadius" in style) style.borderBottomRightRadius = 0;
 
     if (style.style) removeRadius(style.style);
 }
 
 const patches = [];
 
-// --- React.createElement global hook ---
-// Catches almost everything rendered in Discord
+// Hook React.createElement — catches almost everything rendered
 const React = findByProps("createElement", "Component");
 if (React) {
     patches.push(
-        after("createElement", React, (_args, res) => {
+        after("createElement", React, function(_args, res) {
             try {
-                if (res?.props?.style) removeRadius(res.props.style);
-            } catch (_) {}
+                if (res && res.props && res.props.style) {
+                    removeRadius(res.props.style);
+                }
+            } catch (e) {}
             return res;
         })
     );
 }
 
-// --- Avatar (user profile pictures) ---
-const AvatarModule = findByProps("AvatarWithPresence") 
-    ?? findByProps("Avatar", "getAvatarSource");
+// Avatar
+const AvatarModule = findByProps("AvatarWithPresence");
 if (AvatarModule) {
-    const key = AvatarModule.AvatarWithPresence ? "AvatarWithPresence" : "Avatar";
     patches.push(
-        after(key, AvatarModule, (_args, res) => {
-            if (res?.props?.style) removeRadius(res.props.style);
+        after("AvatarWithPresence", AvatarModule, function(_args, res) {
+            try {
+                if (res && res.props && res.props.style) removeRadius(res.props.style);
+            } catch (e) {}
             return res;
         })
     );
 }
 
-// --- Guild/Server icons ---
+// Guild/server icons
 const GuildIconModule = findByProps("GuildIcon");
 if (GuildIconModule) {
     patches.push(
-        after("GuildIcon", GuildIconModule, (_args, res) => {
-            if (res?.props?.style) removeRadius(res.props.style);
+        after("GuildIcon", GuildIconModule, function(_args, res) {
+            try {
+                if (res && res.props && res.props.style) removeRadius(res.props.style);
+            } catch (e) {}
             return res;
         })
     );
 }
 
-// --- Buttons ---
+// Buttons
 const ButtonModule = findByProps("Button", "ButtonColors");
 if (ButtonModule) {
     patches.push(
-        after("Button", ButtonModule, (_args, res) => {
-            if (res?.props?.style) removeRadius(res.props.style);
+        after("Button", ButtonModule, function(_args, res) {
+            try {
+                if (res && res.props && res.props.style) removeRadius(res.props.style);
+            } catch (e) {}
             return res;
         })
     );
 }
 
-// --- Cleanup ---
-export function onUnload() {
-    patches.forEach(p => p?.());
-}
+module.exports = {
+    onUnload: function() {
+        patches.forEach(function(p) { if (p) p(); });
+    }
+};
