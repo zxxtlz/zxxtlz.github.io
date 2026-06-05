@@ -1,14 +1,6 @@
 {
   "name": "Squarecord",
-  "description": "Forces square UI everywhere in Discord (avatars, icons, cards, buttons).",
-  "authors": [
-    {
-      "name": "zxxtlz",
-      "id": "0"
-    }
-  ],
-  "main": "index.js",
-  "vendetta": {
-    "icon": "ic_crop_square"
-  }
+  "description": "Forces square UI everywhere in Discord.",
+  "authors": [{ "name": "zxxtlz", "id": "0" }],
+  "main": "index.js"
 }
